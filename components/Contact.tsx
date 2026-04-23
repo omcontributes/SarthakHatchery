@@ -64,16 +64,20 @@ export default function Contact() {
                 className="border border-gray-900 text-gray-900 font-semibold px-6 py-3 rounded-md hover:bg-gray-900 hover:text-white transition"
               >
                 Call Now
-              </a>
 
-              <a
-                href="https://wa.me/918788629009"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gray-900 text-white font-semibold px-6 py-3 rounded-md hover:bg-gray-700 transition"
-              >
-                Chat on WhatsApp
+              
+        
               </a>
+              <a
+               href="https://wa.me/917276236702"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="bg-gray-900 text-white font-semibold px-6 py-3 rounded-md hover:bg-gray-700 transition"
+               >
+               Chat on WhatsApp
+               </a>
+
+              
 
             </div>
           </div>

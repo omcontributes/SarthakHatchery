@@ -1,71 +1,74 @@
 
+
 import Image from "next/image";
+
 
 const products = [
   {
-    src: "/images/chicks.jpg",
-    alt: "Day-old Chicks",
-    title: "Day-old Chicks",
-    desc: "Healthy and vaccinated chicks ready for farming.",
-    badge: "Best Seller",
+    name: "Kaveri Chicks",
+    description: "Strong dual-purpose breed (eggs & meat).",
+    images: ["/images/kaveri1.jpg", "/images/kaveri2.jpg", "/images/kaveri3.jpg"],
   },
   {
-    src: "/images/farm.jpg",
-    alt: "Broiler Chickens",
-    title: "Broiler Chickens",
-    desc: "Fast-growing, high-quality birds for meat production.",
-    badge: "Popular",
+    name: "Gavran Chicks",
+    description: "Desi breed with high immunity and natural growth.",
+    images: ["/images/gavran1.jpg", "/images/gavran2.jpg", "/images/gavran3.jpg"],
   },
   {
-    src: "/images/eggs.jpg",
-    alt: "Fresh Eggs",
-    title: "Fresh Eggs",
-    desc: "Clean, farm-fresh eggs sourced directly from our farm.",
-    badge: "Fresh Daily",
+    name: "Broiler Chicks",
+    description: "Fast-growing birds for meat production.",
+    images: ["/images/broiler1.jpg", "/images/broiler2.jpg", "/images/broiler3.jpg"],
   },
 ];
 
 export default function Products() {
   return (
-    <section id="products" className="py-20 px-6 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
-        <p className="text-green-600 font-semibold tracking-widest uppercase text-sm text-center mb-3">
-          What We Offer
-        </p>
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">Our Products</h2>
-        <div className="w-16 h-1 bg-green-500 mx-auto mb-12 rounded-full" />
+    
+    
+  <section id="products" className="py-20 px-6">
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {products.map((product) => (
-            <div
-              key={product.title}
-              className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-1"
-            >
-              <div className="relative h-52 overflow-hidden">
-                <Image
-                  src={product.src}
-                  alt={product.alt}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <span className="absolute top-3 left-3 bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                  {product.badge}
-                </span>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{product.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-4">{product.desc}</p>
-                <a
-                  href="tel:+91XXXXXXXXXX"
-                  className="inline-block w-full text-center bg-green-500 hover:bg-green-600 text-white font-medium py-2.5 rounded-xl transition-colors duration-200"
-                >
-                  Order Now
-                </a>
-              </div>
-            </div>
-          ))}
+    {/* Heading */}
+    <div className="text-center mb-12">
+      <h2 className="text-4xl font-bold text-green-600">Products</h2>
+      <p className="text-gray-500 mt-2">Our poultry offerings</p>
+    </div>
+
+    {/* Products Grid */}
+    <div className="max-w-5xl mx-auto grid grid-cols-1 gap-10">
+
+      {products.map((product, index) => (
+        <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
+
+          {/* Images */}
+          <div className="grid grid-cols-3 gap-2 p-3">
+            {product.images.map((img, i) => (
+              <Image
+                key={i}
+                src={img}
+                alt={product.name}
+                width={300}
+                height={200}
+                className="object-cover w-full h-40 rounded-lg"
+              />
+            ))}
+          </div>
+
+          {/* Content */}
+          <div className="p-5">
+            <h3 className="text-xl font-bold mb-2">{product.name}</h3>
+            <p className="text-gray-600 mb-4">{product.description}</p>
+
+            <button className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600">
+              Order Now
+            </button>
+          </div>
+
         </div>
-      </div>
-    </section>
-  );
+      ))}
+
+    </div>
+
+  </section>
+);
+  
 }
