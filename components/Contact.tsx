@@ -16,13 +16,21 @@ export default function Contact() {
           {/* Left */}
           <div className="space-y-8">
 
-            <div>
+            {/* <div>
               <p className="text-xs font-semibold tracking-widest uppercase text-gray-400 mb-1">
                 Phone
               </p>
               <p className="text-xl font-medium text-gray-900">
                 +91 8788629009
               </p>
+            </div> */}
+            <div className="space-y-1">
+            <a href="tel:+918788629009" className="block text-lg">
+             Mobile No: +91 7276236702
+            </a>
+            <a href="tel:+919876543210" className="block text-lg">
+            Mobile No: +91 8788629009
+            </a>
             </div>
 
             <div>
@@ -52,7 +60,7 @@ export default function Contact() {
             <div className="flex gap-4 flex-wrap">
 
               <a
-                href="tel:+918788629009"
+                href="tel:+917276236702"
                 className="border border-gray-900 text-gray-900 font-semibold px-6 py-3 rounded-md hover:bg-gray-900 hover:text-white transition"
               >
                 Call Now
