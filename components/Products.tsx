@@ -15,7 +15,7 @@ const products = [
     images: ["/images/gavran1.jpg", "/images/gavran2.jpg", "/images/gavran3.jpg"],
   },
   {
-    name: "Broiler Chicks",
+    name: "Broiler ",
     description: "Fast-growing birds for meat production.",
     images: ["/images/broiler1.jpg", "/images/broiler2.jpg", "/images/broiler3.jpg"],
   },
