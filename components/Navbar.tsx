@@ -9,7 +9,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/">
           <Image
-            src="/logo.jpeg"
+            src="/sathak_logo.png"
             alt="Sarthak Hatchery"
             width={120}
             height={50}
