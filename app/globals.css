@@ -22,3 +22,7 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+html[lang="mr"] body {
+  font-family: var(--font-devanagari), system-ui, sans-serif;
+}
